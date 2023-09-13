@@ -1,0 +1,143 @@
+:root {
+  --base-1: #f2f2f2;
+  --accent-1: #5d280a;
+
+  --base-2: #fefefe;
+  --accent-2: #661c66;
+
+  --base-3: #fefefe;
+  --accent-3: #4b0017;
+
+  --base-4: #fefefe;
+  --accent-4: #4d2095;
+
+  --base-5: #fefefe;
+  --accent-5: #0f0500;
+
+  --active-base: var(--base-1);
+  --active-accent: var(--accent-1);
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  transition: all 0.5s ease;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 50em;
+
+  line-height: 1.5;
+  padding: 4em 1em;
+
+  background-color: var(--active-base);
+
+  scroll-behavior: smooth;
+}
+
+h1,
+h2 {
+  font-family: avenir-bold;
+  color: var(--active-accent);
+}
+
+h3,
+p,
+button {
+  font-family: circular;
+}
+
+a,
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  height: 56px;
+  background-color: var(--active-accent);
+  filter: opacity(0.8);
+  color: white;
+
+  font-size: 18px;
+  font-weight: bold;
+
+  margin: auto;
+  margin-top: 20px;
+}
+
+a.round,
+button.round {
+  border-radius: 40px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+a.square,
+button.square {
+  border-radius: 4px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+hr {
+  margin: 85px 30px;
+  border: none;
+  height: 1px;
+  background-color: var(--active-accent);
+  filter: opacity(20%);
+}
+
+.img-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+}
+
+.img-container img {
+  width: 220px;
+  max-width: 100%;
+
+  cursor: pointer;
+  border: 5px dashed transparent;
+}
+
+img.selected {
+  border: 5px dashed var(--active-accent);
+  border-radius: 20px;
+}
+
+.columns {
+  display: flex;
+  gap: 20px;
+}
+
+.columns div {
+  flex: 1 1 0px;
+}
+
+.question {
+  text-align: center;
+  font-size: 1.8em;
+
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}
+
+@font-face {
+  font-family: "circular";
+  src: url("assets/circular.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "avenir-bold";
+  src: url("assets/avenir-bold.woff2") format("woff2");
+  font-display: swap;
+}
