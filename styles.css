@@ -1,14 +1,14 @@
 :root {
-  --base-1: #f2f2f2;
+  --base-1: #42b3ad;
   --accent-1: #5d280a;
 
-  --base-2: #fefefe;
+  --base-2: #fc5d03;
   --accent-2: #661c66;
 
-  --base-3: #fefefe;
+  --base-3: #d4baa1;
   --accent-3: #4b0017;
 
-  --base-4: #fefefe;
+  --base-4: #ea534a;
   --accent-4: #4d2095;
 
   --base-5: #fefefe;
@@ -42,7 +42,7 @@ body {
 h1,
 h2 {
   font-family: avenir-bold;
-  color: var(--active-accent);
+  color: var(--active-base);
 }
 
 h3,
@@ -108,11 +108,6 @@ hr {
   border: 5px dashed transparent;
 }
 
-img.selected {
-  border: 5px dashed var(--active-accent);
-  border-radius: 20px;
-}
-
 .columns {
   display: flex;
   gap: 20px;
@@ -140,4 +135,51 @@ img.selected {
   font-family: "avenir-bold";
   src: url("assets/avenir-bold.woff2") format("woff2");
   font-display: swap;
+}
+
+/*redesign************/
+/*********************/
+
+.estruturaDeLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
+  cursor: pointer;
+  border: 2px dashed transparent;
+}
+.estruturaDeLogo img:nth-child(1) {
+  width: 48%;
+  padding-top: 24px;
+}
+.estruturaDeLogo img:nth-child(2) {
+  width: 80%;
+  margin-top: 12px;
+  padding-bottom: 24px;
+}
+.img-container {
+  gap: 8px;
+}
+.estruturaDeLogo.selected {
+  border: 2px dashed #fff;
+  border-radius: 20px;
+}
+button {
+  border-style: none;
+  border-radius: 500px !important;
+  margin-top: 40px;
+  background-color: var(--active-base);
+  color: var(--active-accent);
+}
+body {
+  background-color: var(--active-accent);
+  color: #f2f2f2;
+}
+.question {
+  color: var(--active-base);
+  margin-bottom: 64px;
+  text-decoration-color: #f2f2f2;
+}
+hr {
+  background-color: var(--active-base);
 }
