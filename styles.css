@@ -235,7 +235,7 @@ hr {
 /* about section */
 
 .about {
-  margin-bottom: -5px;
+  margin-bottom: -10px;
 }
 
 .about h2 {
@@ -258,6 +258,30 @@ hr {
 #values{
   margin-top: -5px;
 }
+
+/* newsletter section */
+
+.newsletter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  margin-bottom: -5px;
+}
+
+.newsletter h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: var(--primary);
+  font-family: circular-bold;
+  margin-bottom: -10px;
+}
+
+/* .newsletter button {
+  align-self: center;
+} */
 
 @font-face {
   font-family: "circular";
