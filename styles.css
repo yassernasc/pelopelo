@@ -1,24 +1,30 @@
 :root {
-  --base-1: #f2f2f2;
-  --accent-1: #5d280a;
+    --base-1: #f2f2f2;
+    --primary-1: #42b3ad;
+    --secondary-1: #5d280a;
 
-  --base-2: #fefefe;
-  --accent-2: #661c66;
+    --base-2: fefefe;
+    --primary-2: #fc5d03;
+    --secondary-2: #661c66;
 
-  --base-3: #fefefe;
-  --accent-3: #4b0017;
+  --base-3: fefefe;
+  --primary-3: #d4baa1;
+  --secondary-3: #4b0017;
 
-  --base-4: #fefefe;
-  --accent-4: #4d2095;
+  --base-4: fefefe;
+  --primary-4: #ea534a;
+  --secondary-4: #4d2095;
 
-  --base-5: #fefefe;
-  --accent-5: #0f0500;
+    --base-5: #fefefe;
+    --primary-5: #fefefe;
+  --secondary-5: #0f0500;
 
-  --active-base: var(--base-1);
-  --active-accent: var(--accent-1);
+  --base: var(--base-1);
+  --primary: var(--primary-1);
+  --secondary: var(--secondary-1);
 
-  --contrast: #fff;
   --text: #555;
+  --text-contrast: #fff;
 }
 
 html {
@@ -37,7 +43,7 @@ body {
   padding: 2em 1em;
 
   color: var(--text);
-  background-color: var(--active-base);
+  background-color: var(--base);
   scroll-behavior: smooth;
 }
 
@@ -51,14 +57,9 @@ nav a:first-of-type {
   margin-left: auto;
 }
 
-h1,
-h2,
-a {
-  color: var(--active-accent);
-}
-
 h1 {
-  font-family: circular-bold;
+    color: var(--primary);
+    font-family: circular-bold;
 }
 
 h2 {
@@ -77,7 +78,8 @@ p {
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
+    color: var(--text);
   cursor: pointer;
   font-size: 0.9em;
   font-weight: bold;
@@ -86,8 +88,8 @@ a {
 button {
   cursor: pointer;
   border: none;
-  background-color: var(--active-accent);
-  color: var(--contrast);
+  background-color: var(--secondary);
+  color: var(--text-contrast);
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
@@ -97,9 +99,10 @@ button {
   font-size: 18px;
   font-weight: bold;
 
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
+    justify-content: center;
+
   transition:
     all 0.5s ease,
     transform 0.1s linear;
@@ -110,7 +113,7 @@ button:hover {
 }
 
 button.round {
-  border-radius: 40px;
+  border-radius: 500px;
   padding-left: 24px;
   padding-right: 24px;
 }
@@ -122,10 +125,10 @@ button.square {
 }
 
 hr {
-  margin: 85px 30px;
+  margin: 85px 10px;
   border: none;
   height: 1px;
-  background-color: var(--active-accent);
+  background-color: var(--primary);
   filter: opacity(20%);
 }
 
@@ -169,31 +172,57 @@ hr {
 
 /* poll section */
 
-.question {
-  text-align: center;
-
-  text-decoration: underline;
-  text-decoration-style: wavy;
+.poll {
+  display: flex;
+  flex-direction: column;
+    align-items: center;
+    gap: 20px;
 }
 
-.img-container {
+.question {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+  text-decoration-color: var(--secondary);
+
+  color: var(--primary);
+  margin-bottom: 44px;
+}
+
+.poll-options {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 22px;
 }
 
-.img-container img {
-  width: 220px;
-  max-width: 100%;
-
+.poll-options div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 200px;
   cursor: pointer;
-  border: 5px dashed transparent;
+  border: 2px dashed transparent;
 }
 
-img.selected {
-  border: 5px dashed var(--active-accent);
+.poll-options div.selected {
+  border: 2px dashed var(--secondary);
   border-radius: 20px;
+}
+
+.option img {
+  width: 220px;
+  max-width: 100%;
+}
+
+.option img:nth-child(1) {
+  width: 48%;
+  padding-top: 24px;
+}
+
+.option img:nth-child(2) {
+  width: 80%;
+  margin-top: 12px;
+  padding-bottom: 24px;
 }
 
 @font-face {

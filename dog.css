@@ -64,7 +64,7 @@
   border-top-right-radius: 3vmax;
   border-bottom-right-radius: 3vmax;
   border-bottom-left-radius: 4.5vmax;
-  background-color: var(--active-accent);
+  background-color: var(--secondary);
   animation: snout-b 10s cubic-bezier(0.3, 0.41, 0.18, 1.01) infinite;
 }
 
