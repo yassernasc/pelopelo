@@ -8,47 +8,83 @@
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="dog.css" />
   </head>
   <body x-data="{ selected: 1 }">
-    <h1>PeloPêlo</h1>
+    <nav>
+      <h1>PeloPêlo</h1>
+      <a href="#landing">Home</a>
+      <a href="#poll">Enquete</a>
+      <a href="#poll">Newsletter</a>
+    </nav>
 
-    <div class="columns">
-      <div>
-        <h3>O que é?</h3>
+    <div id="landing" class="landing">
+      <div class="content">
+        <h1>faça a diferença pelos animais</h1>
         <p>
-          É um projeto de apoio para as ONGs da causa animal por meio da
-          tecnologia e inovação, nossa aventura está começando em nossa cidade
-          natal, Campina Grande, Paraíba.
+          PeloPêlo é um projeto de apoio para as ONGs da causa animal por meio
+          da tecnologia e inovação.
         </p>
+
+        <button
+          class="round"
+          x-on:click="window.scrollTo(0, document.body.scrollHeight)"
+        >
+          Nos ajude a escolher nosso focinho!
+        </button>
       </div>
 
-      <div>
-        <h3>Quem somos?</h3>
-        <p>
-          Três amigos com grandes planos. Nossa missão é colaborar e sanar
-          problemas da nossa cidade, pelo pêlo. Somos um time completo com
-          experiência profissional em Design, Social Media e Desenvolvimento de
-          Software.
-        </p>
+      <div class="dog-container">
+        <div class="dog">
+          <div class="dog__paws">
+            <div class="dog__bl-leg leg">
+              <div class="dog__bl-paw paw"></div>
+              <div class="dog__bl-top top"></div>
+            </div>
+            <div class="dog__fl-leg leg">
+              <div class="dog__fl-paw paw"></div>
+              <div class="dog__fl-top top"></div>
+            </div>
+            <div class="dog__fr-leg leg">
+              <div class="dog__fr-paw paw"></div>
+              <div class="dog__fr-top top"></div>
+            </div>
+          </div>
+          <div class="dog__body">
+            <div class="dog__tail"></div>
+          </div>
+          <div class="dog__head">
+            <div class="dog__snout">
+              <div class="dog__nose"></div>
+              <div class="dog__eyes">
+                <div class="dog__eye-l"></div>
+                <div class="dog__eye-r"></div>
+              </div>
+            </div>
+          </div>
+          <div class="dog__head-c">
+            <div class="dog__ear-l"></div>
+            <div class="dog__ear-r"></div>
+          </div>
+        </div>
       </div>
     </div>
-    <button
-      class="round"
-      x-on:click="console.log('fuck'); window.scrollTo(0, document.body.scrollHeight)"
-    >
-      Nos ajude a escolher nosso focinho!
-    </button>
 
     <hr />
 
-    <h1 class="question">Qual ficou mais animal?</h1>
+    <h2 id="poll" class="question">Qual ficou mais animal?</h2>
 
     <div class="img-container">
       <template x-for="option in [1,2,3,4,5]">
         <img
           x-bind:src="`assets/${option}.png`"
           x-bind:class="selected == option ? 'selected' : ''"
-          x-on:click="selected = option; let root = document.documentElement; root.style.setProperty('--active-base', `var(--base-${option})`); root.style.setProperty('--active-accent', `var(--accent-${option})`);"
+          x-on:click="
+           selected = option;
+           let root = document.documentElement;
+           root.style.setProperty('--active-base', `var(--base-${option})`);
+           root.style.setProperty('--active-accent', `var(--accent-${option})`);
+          "
         />
       </template>
     </div>
