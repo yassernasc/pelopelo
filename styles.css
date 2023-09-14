@@ -1,11 +1,11 @@
 :root {
-    --base-1: #f2f2f2;
-    --primary-1: #42b3ad;
-    --secondary-1: #5d280a;
+  --base-1: #f2f2f2;
+  --primary-1: #42b3ad;
+  --secondary-1: #5d280a;
 
-    --base-2: fefefe;
-    --primary-2: #fc5d03;
-    --secondary-2: #661c66;
+  --base-2: fefefe;
+  --primary-2: #fc5d03;
+  --secondary-2: #661c66;
 
   --base-3: fefefe;
   --primary-3: #d4baa1;
@@ -15,8 +15,8 @@
   --primary-4: #ea534a;
   --secondary-4: #4d2095;
 
-    --base-5: #fefefe;
-    --primary-5: #fefefe;
+  --base-5: #fefefe;
+  --primary-5: #fefefe;
   --secondary-5: #0f0500;
 
   --base: var(--base-1);
@@ -58,8 +58,8 @@ nav a:first-of-type {
 }
 
 h1 {
-    color: var(--primary);
-    font-family: circular-bold;
+  color: var(--primary);
+  font-family: circular-bold;
 }
 
 h2 {
@@ -78,8 +78,8 @@ p {
 }
 
 a {
-    text-decoration: none;
-    color: var(--text);
+  text-decoration: none;
+  color: var(--text);
   cursor: pointer;
   font-size: 0.9em;
   font-weight: bold;
@@ -101,7 +101,7 @@ button {
 
   display: flex;
   align-items: center;
-    justify-content: center;
+  justify-content: center;
 
   transition:
     all 0.5s ease,
@@ -175,8 +175,8 @@ hr {
 .poll {
   display: flex;
   flex-direction: column;
-    align-items: center;
-    gap: 20px;
+  align-items: center;
+  gap: 20px;
 }
 
 .question {
