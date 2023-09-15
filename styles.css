@@ -281,7 +281,7 @@ hr {
 
 /* newsletter section */
 
-.newsletter {
+/* .newsletter {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -297,7 +297,7 @@ hr {
   color: var(--primary);
   font-family: circular-bold;
   margin-bottom: -10px;
-}
+} */
 
 @font-face {
   font-family: "circular";
