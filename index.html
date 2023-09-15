@@ -3,10 +3,12 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>PeloPêlo</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
     <script
       defer
       src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
     ></script>
+    <script src="script.js"></script>
     <link rel="stylesheet" href="styles.css" />
     <link rel="stylesheet" href="dog.css" />
     <link
@@ -17,7 +19,7 @@
     />
   </head>
 
-  <body x-data="{ selected: 1 }">
+  <body x-data="state">
     <nav>
       <h1>
         <svg
@@ -120,13 +122,7 @@
           <div
             class="option"
             x-bind:class="selected == option ? 'selected' : ''"
-            x-on:click="
-            selected = option;
-            let root = document.documentElement;
-            root.style.setProperty('--base', `var(--base-${option})`);
-            root.style.setProperty('--primary', `var(--primary-${option})`);
-            root.style.setProperty('--secondary', `var(--secondary-${option})`);
-         "
+            x-on:click="select(option)"
           >
             <img x-bind:src="`assets/${option}.png`" />
             <img src="assets/pelopelo-dark.png" />
@@ -134,7 +130,11 @@
         </template>
       </div>
 
-      <button class="square">Votar</button>
+      <button
+        x-bind:class="voted ? 'square success' : 'square'"
+        x-on:click="vote"
+        x-text="voteText"
+      ></button>
     </div>
     <hr />
     <div class="about" id="about">

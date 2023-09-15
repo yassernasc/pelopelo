@@ -25,6 +25,8 @@
 
   --text: #555;
   --text-contrast: #fff;
+
+  --success: #3d9970;
 }
 
 html {
@@ -110,7 +112,8 @@ a.button {
     transform 0.1s linear;
 }
 
-button:hover {
+button:hover,
+a.button {
   transform: scale(1.025);
 }
 
@@ -126,6 +129,11 @@ a.button.square {
   border-radius: 4px;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+button.success,
+a.button.success {
+  background-color: var(--success);
 }
 
 hr {
