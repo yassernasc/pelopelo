@@ -239,9 +239,7 @@ hr {
 }
 
 .about h2 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  text-align: center;
   gap: 20px;
   color: var(--primary);
   font-family: circular-bold;
@@ -255,8 +253,30 @@ hr {
   margin-bottom: 1px;
 }
 
-#values{
-  margin-top: -5px;
+.values-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+}
+
+.value {
+  background-color: var(--primary);
+  padding: 20px;
+  border-radius: 10px;
+  border: 3px solid var(--base);
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.value h2 {
+  color: var(--text-contrast);
+  font-weight: bold;
+}
+
+.value p {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: var(--text-contrast);
 }
 
 /* newsletter section */
@@ -278,11 +298,6 @@ hr {
   font-family: circular-bold;
   margin-bottom: -10px;
 }
-
-/* não consegui centralizar o botão da newsletter */
-/* .newsletter button {
-  align-self: center;
-} */
 
 @font-face {
   font-family: "circular";
