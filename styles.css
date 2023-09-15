@@ -57,13 +57,10 @@ nav a:first-of-type {
   margin-left: auto;
 }
 
-h1 {
+h1,
+h2 {
   color: var(--primary);
   font-family: circular-bold;
-}
-
-h2 {
-  font-family: avenir-bold;
 }
 
 h3,
@@ -238,45 +235,33 @@ hr {
   margin-bottom: -10px;
 }
 
-.about h2 {
+.about :is(h2, h3) {
   text-align: center;
-  gap: 20px;
-  color: var(--primary);
-  font-family: circular-bold;
-}
-
-.about h3 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 1px;
 }
 
 .values-container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
+  margin: 0 50px;
 }
 
 .value {
-  background-color: var(--primary);
   padding: 20px;
   border-radius: 10px;
-  border: 3px solid var(--base);
+  border: 2px solid var(--secondary);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.value h2 {
-  color: var(--text-contrast);
-  font-weight: bold;
+.value h3 {
+  color: var(--secondary);
+  margin-top: 10px;
 }
 
 .value p {
   text-align: center;
-  margin-top: 10px;
-  font-size: 1.1rem;
-  color: var(--text-contrast);
+  margin: 15px 15px 10px 15px;
+  font-size: 0.92em;
 }
 
 /* newsletter section */
