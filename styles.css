@@ -37,11 +37,8 @@ html {
 }
 
 body {
-  margin: 0 auto;
-  max-width: 50em;
-  line-height: 1.5;
-  padding: 2em 1em;
-
+  margin: 0;
+  padding: 0;
   color: var(--text);
   background-color: var(--base);
   scroll-behavior: smooth;
@@ -51,15 +48,29 @@ nav {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin: 0 auto;
+  max-width: 50em;
 }
+nav a{
+  height: 64px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid ;
+  border-color:  var(--base);
+  margin-left: 16px;
+}
+nav a:hover{
+  border-color:  var(--primary);
 
+}
 nav a:first-of-type {
   margin-left: auto;
 }
 
 h1,
 h2 {
-  color: var(--primary);
+  color: var(--secondary);
   font-family: circular-bold;
 }
 
@@ -125,7 +136,9 @@ button.square,
 a.button.square {
   border-radius: 4px;
   padding-left: 40px;
-  padding-right: 40px;
+  padding-right: 40px;background-color: var(--primary);
+  color: var(--secondary);
+  margin:  64px 0;
 }
 
 hr {
@@ -143,6 +156,8 @@ hr {
   grid-template-columns: 3fr 1fr;
   gap: 30px;
   margin-top: 30px;
+  margin: 64px auto;
+  max-width: 50em;
 }
 
 @media (max-width: 600px) {
@@ -177,19 +192,29 @@ hr {
 /* poll section */
 
 .poll {
+
+  background-color:  var(--secondary);
+  margin-top: 64px;
+}
+.box_poll{
+  margin: 0 auto;
+  max-width: 50em;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 20px;
-}
+  text-align: center;
+  align-items: center;}
 
 .question {
   text-decoration: underline;
   text-decoration-style: wavy;
-  text-decoration-color: var(--secondary);
-
+  text-decoration-color: #FFF;
   color: var(--primary);
-  margin-bottom: 44px;
+  margin-bottom: 64px;
+  margin-top: 64PX;
+}
+.tipografia{
+  opacity: 0.8;
+  margin-top: 24PX !important;
 }
 
 .poll-options {
@@ -209,7 +234,7 @@ hr {
 }
 
 .poll-options div.selected {
-  border: 2px dashed var(--secondary);
+  border: 2px dashed #FFF;
   border-radius: 20px;
 }
 
@@ -232,7 +257,8 @@ hr {
 /* about section */
 
 .about {
-  margin-bottom: -10px;
+  margin: 64px auto;
+  max-width: 50em;
 }
 
 .about :is(h2, h3) {
@@ -266,7 +292,7 @@ hr {
 
 /* newsletter section */
 
-/* .newsletter {
+/*.newsletter {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -300,4 +326,11 @@ hr {
   font-family: "avenir-bold";
   src: url("assets/avenir-bold.woff2") format("woff2");
   font-display: swap;
+}
+
+.baseboard{
+  background-color: var(--secondary);
+  margin-top: 64PX;
+  color: var(--primary);
+  padding: 64PX;
 }
