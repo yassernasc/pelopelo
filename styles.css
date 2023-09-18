@@ -50,6 +50,7 @@ nav {
   gap: 8px;
   margin: 0 auto;
   max-width: 50em;
+  padding: 16px;
 }
 nav a{
   height: 64px;
@@ -158,6 +159,7 @@ hr {
   margin-top: 30px;
   margin: 64px auto;
   max-width: 50em;
+  padding: 16px;
 }
 
 @media (max-width: 600px) {
@@ -192,9 +194,9 @@ hr {
 /* poll section */
 
 .poll {
-
   background-color:  var(--secondary);
   margin-top: 64px;
+  padding: 16px;
 }
 .box_poll{
   margin: 0 auto;
@@ -259,6 +261,7 @@ hr {
 .about {
   margin: 64px auto;
   max-width: 50em;
+  padding: 16px;
 }
 
 .about :is(h2, h3) {
@@ -332,6 +335,7 @@ hr {
   background-color: var(--secondary);
   color: #fefefe;
   padding: 32px 0;
+  padding: 16px;
 
 }
 .box_baseboard{
@@ -351,15 +355,23 @@ hr {
   margin-right: 8px;
   margin-bottom: 16px;
 }
-.box_redes{
 
-}
 .botaoContato{
   background-color: var(--primary);
   color: var(--secondary);
   padding: 8px 32px;
   border-radius: 50px;
   font-size: 12px;
+}
 
-
+.baseboard_end{
+  background-color: var(--primary);
+  font-size: 8px;
+  text-align: center;
+  padding: 16px;
+  font-family: circular-bold;
+  padding: 16px;
+}
+.logo2{
+  fill: var(--primary) ;
 }
