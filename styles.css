@@ -269,7 +269,7 @@ hr {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 20px;
-  margin: 0 50px;
+
 }
 
 .value {
@@ -330,7 +330,36 @@ hr {
 
 .baseboard{
   background-color: var(--secondary);
-  margin-top: 64PX;
+  color: #fefefe;
+  padding: 32px 0;
+
+}
+.box_baseboard{
+  display: flex;
+  justify-content: space-between;
+  margin: 32PX auto;
+  max-width: 50em;
+}
+.box_baseboard h3{
   color: var(--primary);
-  padding: 64PX;
+}
+.box_baseboard p{
+  font-size: 12px;
+}
+.rsocial{
+  width: 32px;
+  margin-right: 8px;
+  margin-bottom: 16px;
+}
+.box_redes{
+
+}
+.botaoContato{
+  background-color: var(--primary);
+  color: var(--secondary);
+  padding: 8px 32px;
+  border-radius: 50px;
+  font-size: 12px;
+
+
 }
