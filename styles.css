@@ -34,6 +34,10 @@ html {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
 * {
   transition: all 0.5s ease;
 }
@@ -84,10 +88,6 @@ a {
   font-weight: bold;
 }
 
-a.button:hover {
-  transform: scale(1.025);
-}
-
 button,
 a.button {
   cursor: pointer;
@@ -113,7 +113,7 @@ a.button {
 }
 
 button:hover,
-a.button {
+a.button:hover {
   transform: scale(1.025);
 }
 
