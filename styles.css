@@ -85,33 +85,12 @@ a {
   font-weight: bold;
 }
 
-a.button {
-  cursor: pointer;
-  border: none;
-  color: var(--text-contrast);
-  box-shadow:
-    rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
-    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
-  background-color: var(--secondary);
-  padding: 0 24px;
-  height: 56px;
-  font-size: 18px;
-  font-weight: bold;
-  border-radius: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  transition:
-    all 0.5s ease,
-    transform 0.1s linear;
-}
-
 a.button:hover {
   transform: scale(1.025);
 }
 
-button {
+button,
+a.button {
   cursor: pointer;
   border: none;
   background-color: var(--secondary);
@@ -138,13 +117,15 @@ button:hover {
   transform: scale(1.025);
 }
 
-button.round {
+button.round,
+a.button.round {
   border-radius: 500px;
   padding-left: 24px;
   padding-right: 24px;
 }
 
-button.square {
+button.square,
+a.button.square {
   border-radius: 4px;
   padding-left: 40px;
   padding-right: 40px;
