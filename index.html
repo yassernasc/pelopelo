@@ -20,7 +20,7 @@
   </head>
 
   <body x-data="state">
-    <nav>
+    <nav class="section">
       <h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@
       <a href="#newsletter">Newsletter</a>
     </nav>
 
-    <div id="landing" class="landing">
+    <div id="landing" class="landing section">
       <div class="content">
         <h1>faça a diferença pelos animais</h1>
         <p>
@@ -114,22 +114,20 @@
 
     <hr />
 
-    <div class="poll">
-      <div class="box-poll">
-        <h2 id="poll" class="question">Qual ficou mais animal?</h2>
+    <div class="poll section">
+      <h2 id="poll" class="question">Qual ficou mais animal?</h2>
 
-        <div class="poll-options">
-          <template x-for="option in [1,2,3,4,5]">
-            <div
-              class="option"
-              x-bind:class="selected == option ? 'selected' : ''"
-              x-on:click="select(option)"
-            >
-              <img x-bind:src="`assets/${option}.png`" />
-              <img src="assets/pelopelo-dark.png" />
-            </div>
-          </template>
-        </div>
+      <div class="poll-options">
+        <template x-for="option in [1,2,3,4,5]">
+          <div
+            class="option"
+            x-bind:class="selected == option ? 'selected' : ''"
+            x-on:click="select(option)"
+          >
+            <img x-bind:src="`assets/${option}.png`" />
+            <img src="assets/pelopelo-dark.png" />
+          </div>
+        </template>
       </div>
 
       <button
@@ -139,7 +137,7 @@
       ></button>
     </div>
     <hr />
-    <div class="about" id="about">
+    <div class="about section" id="about">
       <h2>Quem Somos</h2>
       <p>
         Somos três amigos com grandes sonhos. Três desenvolvedores que acreditam

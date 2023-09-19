@@ -55,9 +55,6 @@ nav {
   display: flex;
   align-items: center;
   gap: 8px;
-  margin: 0 auto;
-  max-width: 50em;
-  padding: 8px;
 }
 
 nav a:first-of-type {
@@ -145,15 +142,18 @@ hr {
   filter: opacity(20%);
 }
 
+.section {
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 8px;
+}
+
 /* landing section */
 
 .landing {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 30px;
-  margin: 0 auto;
-  max-width: 50em;
-  padding: 8px;
   margin-top: 30px;
 }
 
@@ -194,18 +194,12 @@ hr {
   align-items: center;
   gap: 20px;
 }
-.box-poll {
-  margin: 0 auto;
-  max-width: 50em;
-  padding: 8px;
-  text-align: center;
-}
 
 .question {
+  text-align: center;
   text-decoration: underline;
   text-decoration-style: wavy;
   text-decoration-color: var(--secondary);
-
   color: var(--primary);
   margin-bottom: 44px;
 }
@@ -250,13 +244,6 @@ hr {
 /* about section */
 
 .about {
-  margin: 0 auto;
-  max-width: 50em;
-  padding: 8px;
-  text-align: center;
-}
-
-.about :is(h2, h3) {
   text-align: center;
 }
 
