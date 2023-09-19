@@ -140,11 +140,8 @@ a.button.square {
   border-radius: 4px;
   padding-left: 40px;
   padding-right: 40px;
-}
-
-button.success,
-a.button.success {
-  background-color: var(--success);
+  background-color: var(--primary);
+  color: var(--secondary);
 }
 
 hr {
@@ -202,19 +199,25 @@ hr {
 /* poll section */
 
 .poll {
+  padding: 80px 16px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 30px;
+  background-color: var(--secondary);
 }
 
-.question {
+.poll button {
+  margin-top: 24px;
+}
+
+.poll h2 {
   text-align: center;
+  margin: 0;
   text-decoration: underline;
   text-decoration-style: wavy;
-  text-decoration-color: var(--secondary);
+  text-decoration-color: var(--text-contrast);
   color: var(--primary);
-  margin-bottom: 44px;
 }
 
 .poll-options {
@@ -234,7 +237,7 @@ hr {
 }
 
 .poll-options div.selected {
-  border: 2px dashed var(--secondary);
+  border: 2px dashed var(--text-contrast);
   border-radius: 20px;
 }
 
@@ -250,8 +253,9 @@ hr {
 
 .option img:nth-child(2) {
   width: 80%;
-  margin-top: 12px;
+  margin-top: 24px;
   padding-bottom: 24px;
+  opacity: 0.8;
 }
 
 /* about section */
