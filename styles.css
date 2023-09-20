@@ -3,15 +3,15 @@
   --primary-1: #42b3ad;
   --secondary-1: #5d280a;
 
-  --base-2: fefefe;
+  --base-2: #fefefe;
   --primary-2: #fc5d03;
   --secondary-2: #661c66;
 
-  --base-3: fefefe;
+  --base-3: #fefefe;
   --primary-3: #d4baa1;
   --secondary-3: #4b0017;
 
-  --base-4: fefefe;
+  --base-4: #fefefe;
   --primary-4: #ea534a;
   --secondary-4: #4d2095;
 
@@ -328,22 +328,25 @@ hr {
 
 .baseboard {
   background-color: var(--secondary);
-  color: #fefefe;
-  padding: 32px 0;
+  color: var(--base-1);
   padding: 16px;
 }
+
 .box_baseboard {
   display: flex;
   justify-content: space-between;
   margin: 32px auto;
   max-width: 50em;
 }
+
 .box_baseboard h3 {
   color: var(--primary);
 }
+
 .box_baseboard p {
   font-size: 12px;
 }
+
 .rsocial {
   width: 32px;
   margin-right: 8px;
@@ -365,8 +368,8 @@ hr {
   text-align: center;
   padding: 16px;
   font-family: circular-bold;
-  padding: 16px;
 }
+
 .logo2 {
   fill: var(--primary);
 }
