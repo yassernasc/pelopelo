@@ -111,7 +111,12 @@
       </div>
     </div>
 
-    <div class="poll" id="poll">
+    <div
+      class="poll"
+      id="poll"
+      x-show="!voted"
+      x-transition.opacity.duration.400ms.delay.100ms
+    >
       <div class="box-poll section">
         <h2>Qual ficou mais animal?</h2>
 
@@ -127,20 +132,20 @@
             </div>
           </template>
         </div>
-
-        <button
-          x-bind:class="voted ? 'square success' : 'square'"
-          x-on:click="vote"
-          x-text="voteText"
-        ></button>
+        <button class="square" x-on:click="vote">Votar</button>
       </div>
     </div>
 
-    <div class="feedback">
+    <div
+      x-show="voted"
+      x-transition.opacity.duration.400ms.delay.550ms
+      id="feedback"
+      class="feedback"
+    >
       <div class="box-feedback section">
         <img class="logoEscolhida" src="assets/logoescolhida.png" />
         <div class="newsletter" id="newsletter">
-          <h2>Obrigado por ajudar na escolha de nosso fucinho</h2>
+          <h2>Obrigado por ajudar na escolha de nosso focinho</h2>
           <p>
             Deixe seu e-mail aqui para ficar por dentro das últimas novidades e
             informações do projeto <b>PeloPêlo</b>.
@@ -162,8 +167,6 @@
         </div>
       </div>
     </div>
-
-    <hr />
 
     <div class="about section" id="about">
       <h2>Quem Somos</h2>

@@ -13,11 +13,18 @@ const updateColorTheme = (n) => {
 
 const registerVote = (option) => db.from("votes").insert({ option });
 
+const scrollToFeedback = () => {
+  setTimeout(() => {
+    const element = document.getElementById("feedback");
+    const y = element.getBoundingClientRect().top + window.scrollY - 50;
+    window.scroll({ top: y, behavior: "smooth" });
+  }, 550); // 550 is the delay to show the feedback
+};
+
 document.addEventListener("alpine:init", () => {
   Alpine.data("state", () => ({
     selected: 1,
     voted: false,
-    voteText: "Votar",
     select(n) {
       this.selected = n;
       updateColorTheme(n);
@@ -25,8 +32,8 @@ document.addEventListener("alpine:init", () => {
     vote() {
       if (!this.voted) {
         this.voted = true;
-        this.voteText = "Obrigado!";
         registerVote(this.selected).then();
+        scrollToFeedback();
       }
     },
   }));
