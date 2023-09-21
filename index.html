@@ -146,24 +146,29 @@
         <img class="logoEscolhida" src="assets/logoescolhida.png" />
         <div class="newsletter" id="newsletter">
           <h2>Obrigado por ajudar na escolha de nosso focinho</h2>
-          <p>
-            Deixe seu e-mail aqui para ficar por dentro das últimas novidades e
-            informações do projeto <b>PeloPêlo</b>.
-          </p>
 
-          <form
-            action="seu-script-de-processamento-de-newsletter.php"
-            method="POST"
-          >
-            <input
-              type="email"
-              id="email"
-              name="email"
-              required
-              placeholder="Digite aqui o seu Email"
-            />
-            <button type="submit">Inscrever-se</button>
-          </form>
+          <div x-show="!subscribed">
+            <p>
+              Deixe seu e-mail aqui para ficar por dentro das últimas novidades
+              e informações do projeto <b>PeloPêlo</b>.
+            </p>
+            <form @submit.prevent="subscribe">
+              <input
+                type="email"
+                name="email"
+                required
+                placeholder="Digite aqui o seu Email"
+              />
+              <button type="submit">Inscrever-se</button>
+            </form>
+          </div>
+
+          <p x-show="subscribed" x-transition.opacity.delay.50ms>
+            <b>
+              Obrigado novamente! Seu estusiasmo nos motiva bastante a seguir
+              adiante.
+            </b>
+          </p>
         </div>
       </div>
     </div>

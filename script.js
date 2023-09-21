@@ -11,8 +11,6 @@ const updateColorTheme = (n) => {
   root.style.setProperty("--secondary", `var(--secondary-${n})`);
 };
 
-const registerVote = (option) => db.from("votes").insert({ option });
-
 const scrollToFeedback = () => {
   setTimeout(() => {
     const element = document.getElementById("feedback");
@@ -21,10 +19,26 @@ const scrollToFeedback = () => {
   }, 550); // 550 is the delay to show the feedback
 };
 
+const registerVote = (option) => db.from("votes").insert({ option });
+const registerNewEmail = (email) => db.from("newsletter").insert({ email });
+
 document.addEventListener("alpine:init", () => {
   Alpine.data("state", () => ({
     selected: 1,
     voted: false,
+    subscribed: false,
+    init() {
+      const vote = localStorage.getItem("vote");
+      if (vote) {
+        this.voted = true;
+        this.select(+vote);
+      }
+
+      const subscribed = localStorage.getItem("subscribed");
+      if (subscribed) {
+        this.subscribed = true;
+      }
+    },
     select(n) {
       this.selected = n;
       updateColorTheme(n);
@@ -34,7 +48,14 @@ document.addEventListener("alpine:init", () => {
         this.voted = true;
         registerVote(this.selected).then();
         scrollToFeedback();
+        localStorage.setItem("vote", this.selected);
       }
+    },
+    subscribe(ev) {
+      const email = ev.target[0].value;
+      registerNewEmail(email).then();
+      this.subscribed = true;
+      localStorage.setItem("subscribed", "yes baby");
     },
   }));
 });
