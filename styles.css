@@ -26,7 +26,10 @@
   --text: #555;
   --text-contrast: #fff;
 
-  --success: #3d9970;
+  --sm: 16px;
+  --md: 32px;
+  --lg: 40px;
+  --xl: 64px;
 }
 
 html {
@@ -43,8 +46,8 @@ html:focus-within {
 }
 
 body {
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
   line-height: 1.5;
   color: var(--text);
   background-color: var(--base);
@@ -195,6 +198,7 @@ a.button.square {
   margin-top: 64px;
   padding: 40px 0;
 }
+
 .box-poll {
   display: flex;
   flex-direction: column;
@@ -237,7 +241,6 @@ a.button.square {
 }
 
 .option img {
-  width: 220px;
   max-width: 100%;
 }
 
