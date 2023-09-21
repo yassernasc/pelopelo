@@ -57,10 +57,26 @@
           </g>
         </svg>
       </h1>
-      <a href="#landing">Home</a>
-      <a href="#poll">Enquete</a>
-      <a href="#about">Quem Somos</a>
-      <a href="#newsletter">Newsletter</a>
+      <div lass="menu-content">
+        <label class="open-menu-all" for="open-menu-all">
+          <input
+            class="input-menu-all"
+            id="open-menu-all"
+            type="checkbox"
+            name="menu-open"
+          />
+          <div class="navegacao-mobile">
+            <span class="linha-menu"></span>
+            <span class="linha-menu"></span>
+            <span class="linha-menu"></span>
+          </div>
+          <div class="list-menu">
+            <a onclick="ocutaMenu()" href="#landing">Home</a>
+            <a onclick="ocutaMenu()" href="#poll">Enquete</a>
+            <a onclick="ocutaMenu()" href="#about">Quem Somos</a>
+          </div>
+        </label>
+      </div>
     </nav>
 
     <div id="landing" class="landing section">

@@ -31,3 +31,8 @@ document.addEventListener("alpine:init", () => {
     },
   }));
 });
+
+function ocutaMenu() {
+  const elemento = document.getElementById("open-menu-all");
+  elemento.checked = false;
+}
