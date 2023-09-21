@@ -193,7 +193,8 @@ a.button.square {
 
 /* poll section */
 
-.poll {
+.poll,
+.feedback {
   background-color: var(--secondary);
   margin-top: 64px;
   padding: 40px 0;
@@ -241,6 +242,7 @@ a.button.square {
 }
 
 .option img {
+  width: 0px;
   max-width: 100%;
 }
 
@@ -254,6 +256,55 @@ a.button.square {
   margin-top: 24px;
   padding-bottom: 24px;
   opacity: 0.8;
+}
+
+/* feedback */
+.box-feedback {
+  display: grid;
+  grid-template-columns: 20% 70%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 64px 0px;
+}
+
+.logoEscolhida {
+  max-width: 200px;
+}
+
+.newsletter {
+}
+
+.newsletter h2 {
+  padding: 0;
+  margin: 0;
+}
+.newsletter p {
+  padding: 0;
+  margin: 0;
+  padding-top: 8px;
+  color: var(--text-contrast);
+}
+
+.newsletter form {
+  padding-top: 16px;
+  display: flex;
+  align-items: center;
+}
+
+.newsletter form input {
+  border-radius: 8px;
+  border: 0px;
+  padding: 24px 8px;
+  width: 100%;
+  font-size: 16px;
+}
+.newsletter form button {
+  border-radius: 8px;
+  background-color: var(--primary);
+  margin-left: -124px;
+  min-width: 120px;
+  font-size: 16px;
+  font-weight: 100;
 }
 
 /* about section */
