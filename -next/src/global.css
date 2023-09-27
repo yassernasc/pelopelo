@@ -1,0 +1,33 @@
+:root {
+  --base-1: #f2f2f2;
+  --primary-1: #42b3ad;
+  --secondary-1: #5d280a;
+
+  --base-2: #fefefe;
+  --primary-2: #fc5d03;
+  --secondary-2: #661c66;
+
+  --base-3: #fefefe;
+  --primary-3: #d4baa1;
+  --secondary-3: #4b0017;
+
+  --base-4: #fefefe;
+  --primary-4: #ea534a;
+  --secondary-4: #4d2095;
+
+  --base-5: #fefefe;
+  --primary-5: dimgray;
+  --secondary-5: #0f0500;
+
+  --base: var(--base-1);
+  --primary: var(--primary-1);
+  --secondary: var(--secondary-1);
+
+  --text: #555;
+  --text-contrast: #fff;
+
+  --sm: 16px;
+  --md: 32px;
+  --lg: 40px;
+  --xl: 64px;
+}
