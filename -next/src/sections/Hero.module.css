@@ -1,0 +1,32 @@
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 3fr 1fr;
+  margin-top: var(--xl);
+}
+
+@media (max-width: 600px) {
+  .main {
+    display: flex;
+    flex-direction: column;
+    gap: 55px;
+  }
+}
+
+.messages {
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dogContainer {
+  align-self: end;
+  transform: scale(0.8);
+}

@@ -16,7 +16,7 @@
   --secondary-4: #4d2095;
 
   --base-5: #fefefe;
-  --primary-5: #fefefe;
+  --primary-5: dimgray;
   --secondary-5: #0f0500;
 
   --base: var(--base-1);
@@ -311,8 +311,9 @@ a.button.square {
 
 .about {
   text-align: center;
-  margin-top: 24 * -+px;
+  margin-top: 24px;
 }
+
 .about h2 {
   margin-top: 40px;
 }

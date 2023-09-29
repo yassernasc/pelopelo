@@ -1,0 +1,42 @@
+.content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: var(--md);
+}
+
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 22px;
+  justify-content: center;
+}
+
+.options div {
+  align-items: center;
+  border: 2px dashed transparent;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  max-width: 200px;
+}
+
+.options div.selected {
+  border-radius: 20px;
+  border: 2px dashed var(--text-contrast);
+}
+
+.option img {
+  max-width: 100%;
+}
+
+.option img:nth-child(1) {
+  padding-top: 24px;
+  width: 48%;
+}
+
+.option img:nth-child(2) {
+  margin: 24px 0;
+  opacity: 0.8;
+  width: 80%;
+}

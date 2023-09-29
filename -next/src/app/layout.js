@@ -1,5 +1,5 @@
-import "./reset.css";
-import "./global.css";
+import "../reset.css";
+import "../global.css";
 
 export const metadata = {
   title: "PeloPêlo",

@@ -1,0 +1,48 @@
+.content {
+  align-items: center;
+  display: flex;
+  gap: var(--xl);
+  justify-content: center;
+  padding: 54px 0;
+}
+
+@media (max-width: 600px) {
+  .content {
+    flex-direction: column;
+    gap: var(--md);
+  }
+}
+
+.social {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.icons {
+  display: flex;
+  gap: 12px;
+}
+
+.iconContainer {
+  background-color: var(--primary);
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.iconContainer img {
+  width: 32px;
+}
+
+.verticalLine {
+  background-color: var(--base);
+  height: 125px;
+  opacity: 0.4;
+  width: 1px;
+}
+
+@media (max-width: 600px) {
+  .verticalLine {
+    display: none;
+  }
+}

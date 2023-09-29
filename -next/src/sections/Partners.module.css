@@ -1,0 +1,18 @@
+.images {
+  display: flex;
+  gap: 14px;
+}
+
+.imgContainer {
+  align-items: center;
+  border-radius: 16px;
+  border: 1px var(--secondary) solid;
+  display: grid;
+  height: auto;
+  padding: 8px 30px;
+  width: 200px;
+}
+
+.imgContainer:nth-child(1) {
+  background-color: #ffd801;
+}
