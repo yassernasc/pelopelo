@@ -1,42 +1,86 @@
-import { useEffect, useState } from "react";
+import { useRef } from "react";
+import { useDatabase } from "@/hooks";
 import c from "clsx";
 import styles from "./Poll.module.css";
 
-import { Button } from "@/components";
-
 const options = [1, 2, 3, 4, 5];
-const updateColorTheme = (n) => {
-  let root = document.documentElement;
-  root.style.setProperty("--base", `var(--base-${n})`);
-  root.style.setProperty("--primary", `var(--primary-${n})`);
-  root.style.setProperty("--secondary", `var(--secondary-${n})`);
-};
 
 export const Poll = () => {
-  const [selected, setSelected] = useState(options[0]);
+  const { vote, voted, selected, setSelected, subscribe, subscribed } =
+    useDatabase();
+  const emailInputRef = useRef(null);
 
-  useEffect(() => {
-    updateColorTheme(selected);
-  }, [selected]);
+  const handleSubscriptionSubmit = (ev) => {
+    ev.preventDefault();
+    const { value: email } = emailInputRef.current;
+    if (email) {
+      subscribe(email);
+    }
+  };
 
   return (
     <section class="colored-section" id="poll">
       <div class={c("colored-section-content", styles.content)}>
-        <h2>Qual ficou mais animal?</h2>
+        {!voted && (
+          <>
+            <h2>Escolha um focinho para ser a nossa cara:</h2>
 
-        <div class={styles.options}>
-          {options.map((option) => (
-            <div
-              key={option}
-              class={c(styles.option, selected === option && styles.selected)}
-              onClick={() => setSelected(option)}
-            >
-              <img src={`${option}.png`} />
-              <img src="pelopelo-light.png" />
+            <div class={styles.options}>
+              {options.map((option) => (
+                <div
+                  key={option}
+                  class={c(
+                    styles.option,
+                    selected === option && styles.selected,
+                  )}
+                  onClick={() => setSelected(option)}
+                >
+                  <img src={`${option}.png`} />
+                  <img src="pelopelo-light.png" />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        <Button>Votar</Button>
+            <button class={styles.voteButton} onClick={vote}>
+              Votar
+            </button>
+          </>
+        )}
+
+        {voted && (
+          <div class={styles.feedback}>
+            <img src="logoescolhida.png" />
+            <div>
+              <h2>Obrigado por ajudar na escolha de nosso focinho</h2>
+
+              {!subscribed && (
+                <>
+                  <p>
+                    Deixe seu e-mail aqui para ficar por dentro das últimas
+                    novidades e informações do projeto <b>PeloPêlo</b>.
+                  </p>
+                  <form onSubmit={handleSubscriptionSubmit}>
+                    <input
+                      ref={emailInputRef}
+                      type="email"
+                      required
+                      placeholder="Digite aqui o seu Email"
+                    />
+                    <button type="submit">Inscrever-se</button>
+                  </form>
+                </>
+              )}
+
+              {subscribed && (
+                <p>
+                  <b>
+                    Obrigado novamente! Seu estusiasmo nos motiva bastante a
+                    seguir adiante.
+                  </b>
+                </p>
+              )}
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

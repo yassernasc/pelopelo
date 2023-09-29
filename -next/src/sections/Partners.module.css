@@ -1,6 +1,14 @@
 .images {
   display: flex;
   gap: 14px;
+  margin-top: var(--md);
+}
+
+@media (max-width: 600px) {
+  .images {
+    gap: 0;
+    justify-content: space-evenly;
+  }
 }
 
 .imgContainer {
