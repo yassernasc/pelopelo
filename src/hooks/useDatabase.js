@@ -10,6 +10,12 @@ const db = createClient(databaseUrl, publicKey);
 const registerVote = (option) => db.from("votes").insert({ option });
 const registerNewEmail = (email) => db.from("newsletter").insert({ email });
 
+const scrollToFeedback = () => {
+  const element = document.getElementById("poll");
+  const y = element.getBoundingClientRect().top + window.scrollY - 50;
+  window.scroll({ top: y, behavior: "smooth" });
+};
+
 const updateColorTheme = (n) => {
   let root = document.documentElement;
   root.style.setProperty("--base", `var(--base-${n})`);
@@ -46,6 +52,7 @@ export const useDatabase = () => {
       setVoted(true);
       registerVote(selected).then();
       localStorage.setItem("vote", selected);
+      scrollToFeedback();
     }
   }, [selected, voted, setVoted]);
 
