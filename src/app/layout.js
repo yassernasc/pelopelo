@@ -20,6 +20,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html class={c(headingFont.variable, textFont.variable)} lang="pt-BR">
+      <head>
+        <link rel="icon" type="image/png" sizes="192x192" href="favicon.png" />
+      </head>
       <body>{children}</body>
       <Script id="goatcounter-checkprod">
         {`
