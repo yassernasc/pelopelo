@@ -13,7 +13,7 @@ const headingFont = Suez_One({
 const textFont = Nunito({ variable: "--text-font", subsets: ["latin"] });
 
 export const metadata = {
-  title: "PeloPêlo",
+  title: "PeloPelo",
   description: "Adote animais em Campina Grande",
 };
 

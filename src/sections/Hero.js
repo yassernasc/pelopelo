@@ -12,7 +12,7 @@ export const Hero = () => (
       <div class={styles.messages}>
         <h1>Vamos fazer a diferença pelos animais?</h1>
         <p>
-          PeloPêlo é um projeto de apoio às ONGs da causa animal de Campina
+          PeloPelo é um projeto de apoio às ONGs da causa animal de Campina
           Grande-PB, por meio da tecnologia e inovação.
         </p>
 

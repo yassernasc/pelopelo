@@ -12,7 +12,7 @@ export const About = () => (
     </p>
     <h2>Nossa Missão</h2>
     <p>
-      A missão do PeloPêlo é criar um impacto significativo na vida dos animais
+      A missão do PeloPelo é criar um impacto significativo na vida dos animais
       por meio da tecnologia e inovação. Acreditamos que todos os seres vivos
       merecem cuidado, compaixão e uma chance de viver uma vida feliz e
       saudável. Trabalhamos para apoiar as organizações de proteção animal e

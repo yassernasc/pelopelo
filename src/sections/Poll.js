@@ -36,7 +36,7 @@ export const Poll = () => {
                   onClick={() => setSelected(option)}
                 >
                   <img src={`${option}.png`} />
-                  <img src="pelopelo-light.png" />
+                  <img src="tipografia.png" />
                 </div>
               ))}
             </div>
@@ -48,7 +48,7 @@ export const Poll = () => {
 
         {voted && (
           <div class={styles.feedback}>
-            <img src="logoescolhida.png" />
+            <img src={`voted-${selected}.png`} />
             <div>
               <h2>Obrigado por ajudar na escolha de nosso focinho</h2>
 
@@ -56,7 +56,7 @@ export const Poll = () => {
                 <>
                   <p>
                     Deixe seu e-mail aqui para ficar por dentro das últimas
-                    novidades e informações do projeto <b>PeloPêlo</b>.
+                    novidades e informações do projeto <b>PeloPelo</b>.
                   </p>
                   <form onSubmit={handleSubscriptionSubmit}>
                     <input
