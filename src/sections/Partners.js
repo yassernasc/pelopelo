@@ -1,17 +1,20 @@
 import styles from "./Partners.module.css";
 
-const email = "contato@pelopelo.com.br";
+const ongs = [
+  { image: "patinhas", link: "https://www.instagram.com/clubetiopatinhas" },
+  { image: "tota", link: "https://www.instagram.com/arcadotota" },
+  { image: "animaisdecg", link: "https://www.instagram.com/pelopelocg" },
+];
 
 export const Partners = () => (
   <section class="section" id="partners">
     <h2>Nossos Parceiros</h2>
     <div class={styles.images}>
-      <div class={styles.imgContainer}>
-        <img src="patinhas.png" />
-      </div>
-      <div class={styles.imgContainer}>
-        <img src="arca.png" />
-      </div>
+      {ongs.map((ong) => (
+        <a target="_blank" href={ong.link}>
+          <img src={`${ong.image}.png`} />
+        </a>
+      ))}
     </div>
   </section>
 );

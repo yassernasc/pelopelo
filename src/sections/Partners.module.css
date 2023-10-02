@@ -1,26 +1,22 @@
 .images {
   display: flex;
+  flex-wrap: wrap;
   gap: 14px;
   margin-top: var(--md);
 }
 
+.images img {
+  height: 110px;
+}
+
 @media (max-width: 600px) {
   .images {
-    gap: 0;
-    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
   }
-}
 
-.imgContainer {
-  align-items: center;
-  border-radius: 16px;
-  border: 1px var(--secondary) solid;
-  display: grid;
-  height: auto;
-  padding: 8px 30px;
-  width: 200px;
-}
-
-.imgContainer:nth-child(1) {
-  background-color: #ffd801;
+  .images img {
+    height: auto;
+    width: 55%;
+  }
 }
