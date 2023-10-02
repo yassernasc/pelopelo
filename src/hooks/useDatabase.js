@@ -1,15 +1,14 @@
+import { createClient } from "@supabase/supabase-js";
 import { useState, useEffect, useCallback } from "react";
 
-/*
 const databaseUrl = "https://wjfdckhpgwcdmgpzymkz.supabase.co";
 const publicKey =
   "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndqZmRja2hwZ3djZG1ncHp5bWt6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTQ3OTk0MDAsImV4cCI6MjAxMDM3NTQwMH0.a144HyCKUyh_PDPTPFstXLqNqSis9ZQF4P9ChHsP7kY";
 
-const db = supabase.createClient(databaseUrl, publicKey);
+const db = createClient(databaseUrl, publicKey);
 
 const registerVote = (option) => db.from("votes").insert({ option });
 const registerNewEmail = (email) => db.from("newsletter").insert({ email });
- */
 
 const updateColorTheme = (n) => {
   let root = document.documentElement;
@@ -45,16 +44,19 @@ export const useDatabase = () => {
   const vote = useCallback(() => {
     if (!voted) {
       setVoted(true);
-      // registerVote(this.selected).then();
+      registerVote(selected).then();
       localStorage.setItem("vote", selected);
     }
-  }, [selected, voted]);
+  }, [selected, voted, setVoted]);
 
-  const subscribe = useCallback((email) => {
-    // registerNewEmail(email).then();
-    setSubscribed(true);
-    localStorage.setItem("subscribed", "yes baby");
-  }, []);
+  const subscribe = useCallback(
+    (email) => {
+      registerNewEmail(email).then();
+      setSubscribed(true);
+      localStorage.setItem("subscribed", "yes baby");
+    },
+    [setSubscribed],
+  );
 
   return { vote, voted, selected, setSelected, subscribe, subscribed };
 };
