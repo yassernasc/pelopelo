@@ -1,3 +1,4 @@
+import Script from "next/script";
 import { Suez_One, Nunito } from "next/font/google";
 import c from "clsx";
 
@@ -20,6 +21,20 @@ export default function RootLayout({ children }) {
   return (
     <html class={c(headingFont.variable, textFont.variable)} lang="pt-BR">
       <body>{children}</body>
+      <Script id="goatcounter-checkprod">
+        {`
+           const isProd = window.location.host.endsWith('.org');
+           if (!isProd) {
+             window.goatcounter = { no_onload: true }
+           }
+        `}
+      </Script>
+
+      <Script
+        data-goatcounter="https://pelopelo.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js"
+      />
     </html>
   );
 }
