@@ -28,6 +28,7 @@
   --text: #555;
   --text-contrast: #fff;
 
+  --xs: 8px;
   --sm: 16px;
   --md: 32px;
   --lg: 40px;
@@ -147,4 +148,10 @@ a {
 button,
 a.button {
   transition-duration: 0.15s;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #dedede;
 }
