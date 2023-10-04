@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useDatabase } from "@/hooks";
 import c from "clsx";
 import styles from "./Poll.module.css";
@@ -6,6 +6,7 @@ import styles from "./Poll.module.css";
 const options = [1, 2, 3, 4, 5];
 
 export const Poll = () => {
+  const [preventVote, setPreventVote] = useState(true);
   const { vote, voted, selected, setSelected, subscribe, subscribed } =
     useDatabase();
   const emailInputRef = useRef(null);
@@ -16,6 +17,11 @@ export const Poll = () => {
     if (email) {
       subscribe(email);
     }
+  };
+
+  const handleSelected = (option) => {
+    setPreventVote(false);
+    setSelected(option);
   };
 
   return (
@@ -33,14 +39,18 @@ export const Poll = () => {
                     styles.option,
                     selected === option && styles.selected,
                   )}
-                  onClick={() => setSelected(option)}
+                  onClick={() => handleSelected(option)}
                 >
                   <img src={`${option}.png`} />
                   <img src="tipografia.png" />
                 </div>
               ))}
             </div>
-            <button class={styles.voteButton} onClick={vote}>
+            <button
+              disabled={preventVote}
+              class={styles.voteButton}
+              onClick={vote}
+            >
               Votar
             </button>
           </>
