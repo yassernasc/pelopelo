@@ -12,7 +12,7 @@ export const Partners = () => (
     <h2>Nossos Parceiros</h2>
     <div class={styles.images}>
       {ongs.map((ong) => (
-        <a target="_blank" href={ong.link}>
+        <a key={ong.image} target="_blank" href={ong.link}>
           <img src={`${ong.image}.png`} />
         </a>
       ))}
