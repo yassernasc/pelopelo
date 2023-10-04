@@ -25,6 +25,10 @@
   gap: 12px;
 }
 
+.icons a {
+  display: flex;
+}
+
 .iconContainer {
   align-items: center;
   background-color: var(--primary);
@@ -48,4 +52,23 @@
   .verticalLine {
     display: none;
   }
+}
+
+.end {
+  background-color: var(--primary);
+  padding: 5px;
+}
+
+@media (max-width: 600px) {
+  .end {
+    display: none;
+  }
+}
+
+.end p {
+  color: var(--secondary);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  text-align: center;
 }
