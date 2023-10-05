@@ -1,12 +1,13 @@
 .images {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
+  gap: 10px;
+  justify-content: center;
   margin-top: var(--md);
 }
 
 .images img {
-  height: 110px;
+  height: 96px;
 }
 
 @media (max-width: 600px) {

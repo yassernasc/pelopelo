@@ -4,6 +4,7 @@ const ongs = [
   { image: "patinhas", link: "https://www.instagram.com/clubetiopatinhas" },
   { image: "tota", link: "https://www.instagram.com/arcadotota" },
   { image: "animaisdecg", link: "https://www.instagram.com/animaisdecg" },
+  { image: "a4", link: "https://www.instagram.com/a4.ong" },
 ];
 
 export const Partners = () => (
