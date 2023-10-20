@@ -12,6 +12,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.37.0",
     "clsx": "^2.0.0",
+    "just-shuffle": "^4.2.0",
     "next": "latest",
     "ramda": "^0.29.1",
     "react": "latest",
