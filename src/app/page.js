@@ -1,5 +1,3 @@
-"use client";
-
 import { About, Footer, Hero, Partners, Poll, Catalog } from "@/sections";
 
 export default function Home() {

@@ -16,7 +16,10 @@
 
 .card img {
   border-radius: var(--xs);
+  height: 200px;
   margin: auto;
+  object-fit: none;
+  width: 100%;
 }
 
 .card button {
