@@ -63,3 +63,26 @@
   align-self: center;
   font-size: 0.7rem;
 }
+
+.pagination {
+  display: flex;
+  gap: 10px;
+  margin-top: 56px;
+}
+
+.pagination span {
+  align-items: center;
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  font-size: 0.9rem;
+  height: 38px;
+  justify-content: center;
+  width: 38px;
+  transition-duration: 0.15s;
+}
+
+.pagination .activePage {
+  border: 2px solid var(--primary);
+}
