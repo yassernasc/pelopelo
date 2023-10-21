@@ -1,11 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { registerVote, registerNewEmail } from "@/services/supabase";
-
-const scrollToFeedback = () => {
-  const element = document.getElementById("poll");
-  const y = element.getBoundingClientRect().top + window.scrollY - 50;
-  window.scroll({ top: y, behavior: "smooth" });
-};
+import { scrollTo } from "@/utils";
 
 const updateColorTheme = (n) => {
   let root = document.documentElement;
@@ -43,7 +38,7 @@ export const useDatabase = () => {
       setVoted(true);
       registerVote(selected).then();
       localStorage.setItem("vote", selected);
-      scrollToFeedback();
+      scrollTo("poll");
     }
   }, [selected, voted, setVoted]);
 

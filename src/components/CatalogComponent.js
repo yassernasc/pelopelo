@@ -3,6 +3,7 @@
 import { range, splitEvery } from "ramda";
 import { useState } from "react";
 import c from "clsx";
+import { scrollTo } from "@/utils";
 import styles from "./CatalogComponent.module.css";
 
 const Card = ({ nome, sexo, idade, porte, image }) => (
@@ -26,6 +27,11 @@ export const CatalogComponent = ({ pets }) => {
   const groupedPets = splitEvery(PAGE_SIZE, pets);
   const activePage = groupedPets[activePageIndex - 1];
 
+  const handlePageChange = (newIndex) => {
+    setActivePageIndex(newIndex);
+    scrollTo("catalog");
+  };
+
   return (
     <section class="section" id="catalog">
       <h2>Encontre seu novo amigo</h2>
@@ -39,7 +45,7 @@ export const CatalogComponent = ({ pets }) => {
           <span
             key={page}
             className={c(activePageIndex === page && styles.activePage)}
-            onClick={() => setActivePageIndex(page)}
+            onClick={() => handlePageChange(page)}
           >
             {page}
           </span>
