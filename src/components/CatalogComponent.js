@@ -5,6 +5,7 @@ import { useState } from "react";
 import c from "clsx";
 import { scrollTo } from "@/utils";
 import styles from "./CatalogComponent.module.css";
+import { Adopt } from "./Adopt";
 
 const Card = ({ nome, sexo, idade, porte, image }) => (
   <div class={styles.card}>
@@ -14,7 +15,7 @@ const Card = ({ nome, sexo, idade, porte, image }) => (
       <hr></hr>
       <p>{[sexo, idade, porte].join(", ")}</p>
     </div>
-    <button>Adotar</button>
+    <Adopt nome={nome} sexo={sexo} />
   </div>
 );
 

@@ -10,6 +10,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@radix-ui/react-dialog": "1.0.5",
     "@supabase/supabase-js": "^2.37.0",
     "clsx": "^2.0.0",
     "just-shuffle": "^4.2.0",
