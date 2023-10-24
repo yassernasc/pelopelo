@@ -1,12 +1,9 @@
-import { Menu, Dog, SimpleTextLogo } from "@/components";
+import { Header, Dog } from "@/components";
 import styles from "./Hero.module.css";
 
 export const Hero = () => (
   <section class="section">
-    <header class={styles.header}>
-      <SimpleTextLogo />
-      <Menu />
-    </header>
+    <Header />
 
     <div class={styles.main}>
       <div class={styles.messages}>

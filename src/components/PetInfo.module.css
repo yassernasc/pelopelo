@@ -1,0 +1,79 @@
+.container {
+  padding: var(--md);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container button {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.header h1 {
+  color: var(--secondary);
+}
+
+.header p {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding-bottom: 0;
+}
+
+.infoContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.info span:nth-of-type(1) {
+  font-size: 0.75rem;
+}
+
+.info span:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.icons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.infoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  border: 2px solid var(--inactive);
+  padding: var(--sm) 0;
+  border-radius: var(--xs);
+  justify-content: space-between;
+}
+
+.infoCard .icon {
+  scale: 70%;
+}
+
+.infoCard h3 {
+  font-size: 0.6rem;
+}
+
+.infoCard div {
+  height: 4px;
+  width: 60%;
+  background-color: var(--primary);
+  border-radius: 50px;
+}
+
+.infoCard .inactive {
+  color: var(--inactive);
+}

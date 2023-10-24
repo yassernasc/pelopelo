@@ -1,3 +1,5 @@
+"use client";
+
 import * as Dialog from "@radix-ui/react-dialog";
 import { CloseIcon } from "./CloseIcon";
 import styles from "./Adopt.module.css";

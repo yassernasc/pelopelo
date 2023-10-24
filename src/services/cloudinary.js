@@ -11,6 +11,11 @@ export const getImages = async () => {
   }));
 };
 
+export const getImagesFromPet = async (petId) => {
+  const images = await getImages();
+  return images.filter((i) => i.id == petId).map((image) => image.url);
+};
+
 export const applyTransformation = (url, transformation) => {
   const TransformationsMap = {
     thumb: "t_media_lib_thumb",

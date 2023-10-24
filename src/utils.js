@@ -4,6 +4,9 @@ export const scrollTo = (elem) => {
   window.scroll({ top: y, behavior: "smooth" });
 };
 
+export const formatDate = (dateStr) =>
+  new Date(dateStr).toLocaleDateString("pt-BR");
+
 const formatEspecie = (especie) => (especie === "gato" ? "Felina" : "Canina");
 const formatOng = (ong) => {
   const OngsMap = {
