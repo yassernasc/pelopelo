@@ -28,6 +28,8 @@
   --text: #555;
   --text-contrast: #fff;
 
+  --inactive: #dedede;
+
   --xs: 8px;
   --sm: 16px;
   --md: 32px;
@@ -92,12 +94,12 @@ a.button {
 
 button:hover,
 a.button:hover {
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
 button:active,
 a.button:active {
-  transform: scale(0.985);
+  transform: scale(0.99);
 }
 
 button[disabled],

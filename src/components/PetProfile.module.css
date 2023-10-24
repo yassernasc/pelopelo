@@ -1,0 +1,136 @@
+.overlay {
+  animation: overlayShow 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  background-color: white;
+  inset: 0;
+  position: fixed;
+}
+
+.content {
+  left: 50%;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+}
+
+.contentContainer {
+  grid-template-columns: 10fr 8fr;
+  display: grid;
+  max-height: 100vh;
+  overflow-y: scroll;
+}
+
+.profile {
+  padding: var(--md);
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profile button {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.profileHeader h1 {
+  color: var(--secondary);
+}
+
+.profileHeader p {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding-bottom: 0;
+}
+
+.profileInfoContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.profileInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.profileInfo span:nth-of-type(1) {
+  font-size: 0.75rem;
+}
+
+.profileInfo span:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.profileIcons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 5px;
+}
+
+.profileInfoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  border: 2px solid var(--inactive);
+  padding: var(--sm) 0;
+  border-radius: var(--xs);
+  justify-content: space-between;
+}
+
+.profileInfoCard h3 {
+  font-size: 0.6rem;
+}
+
+.profileInfoCard .inactive {
+  color: var(--inactive);
+}
+
+.profileInfoCard .icon {
+  scale: 70%;
+}
+
+.profileInfoCard div {
+  height: 4px;
+  width: 60%;
+  background-color: var(--primary);
+  border-radius: 50px;
+}
+
+.profileInfoCard div.inactive {
+  background-color: var(--inactive);
+}
+
+.album {
+  display: flex;
+  gap: var(--xs);
+  padding: var(--md);
+  padding-right: 0;
+}
+
+.thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.full {
+  border-radius: var(--xs);
+  box-shadow: 0px 2px 10px 0px #dedede;
+  height: 480px;
+  margin: auto;
+  object-fit: cover;
+  width: 100%;
+}
+
+.thumb {
+  border-radius: var(--xs);
+  box-shadow: 0px 2px 10px 0px #dedede;
+  height: 50px;
+  object-fit: cover;
+  width: 60px;
+  border: 2px solid rgba(242, 242, 242, 1);
+}

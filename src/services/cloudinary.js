@@ -1,10 +1,3 @@
-const addTransformation = (url) => {
-  const foo = url.split("/");
-  const index = foo.findIndex((chunk) => chunk === "upload");
-  foo.splice(index + 1, 0, "t_mini");
-  return foo.join("/");
-};
-
 export const getImages = async () => {
   const rawResult = await fetch(
     "https://api.cloudinary.com/v1_1/dawkfbcvp/resources/image/upload?max_results=100?max_results=250",
@@ -12,8 +5,21 @@ export const getImages = async () => {
   );
 
   const { resources } = await rawResult.json();
-  return resources.map(({ url, folder }) => ({
-    url: addTransformation(url),
+  return resources.map(({ secure_url, folder }) => ({
+    url: secure_url,
     id: folder,
   }));
+};
+
+export const applyTransformation = (url, transformation) => {
+  const TransformationsMap = {
+    thumb: "t_media_lib_thumb",
+    mini: "t_mini",
+    full: "t_full",
+  };
+
+  const chunks = url.split("/");
+  const index = chunks.findIndex((chunk) => chunk === "upload");
+  chunks.splice(index + 1, 0, TransformationsMap[transformation]);
+  return chunks.join("/");
 };

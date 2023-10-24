@@ -5,10 +5,10 @@ import styles from "./Adopt.module.css";
 const getFormattedName = ({ nome, sexo }) =>
   `${sexo === "macho" ? "o" : "a"} ${nome}`;
 
-export const Adopt = ({ ...pet }) => (
+export const Adopt = ({ pet }) => (
   <Dialog.Root>
     <Dialog.Trigger asChild>
-      <button>Adotar</button>
+      <button>Quero Adotar</button>
     </Dialog.Trigger>
     <Dialog.Portal>
       <Dialog.Overlay class={styles.overlay} />

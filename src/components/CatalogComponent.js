@@ -4,18 +4,24 @@ import { range, splitEvery } from "ramda";
 import { useState } from "react";
 import c from "clsx";
 import { scrollTo } from "@/utils";
+import { applyTransformation } from "@/services/cloudinary";
 import styles from "./CatalogComponent.module.css";
-import { Adopt } from "./Adopt";
+import { PetProfile } from "./PetProfile";
 
-const Card = ({ nome, sexo, idade, porte, image }) => (
+const Card = ({ pet }) => (
   <div class={styles.card}>
-    <img src={image} />
+    <img src={applyTransformation(pet.images[0], "mini")} />
     <div class={styles.details}>
-      <h3>{nome}</h3>
+      <div>
+        <h3>{pet.nome}</h3>
+        <p>{pet.sexo}</p>
+      </div>
       <hr></hr>
-      <p>{[sexo, idade, porte].join(", ")}</p>
+      <p>
+        {pet.idade}, {pet.porte}
+      </p>
     </div>
-    <Adopt nome={nome} sexo={sexo} />
+    <PetProfile pet={pet} />
   </div>
 );
 
@@ -38,7 +44,7 @@ export const CatalogComponent = ({ pets }) => {
       <h2>Encontre seu novo amigo</h2>
       <div class={styles.list}>
         {activePage.map((pet) => (
-          <Card key={pet.id} {...pet} />
+          <Card key={pet.id} pet={pet} />
         ))}
       </div>
       <div class={styles.pagination}>

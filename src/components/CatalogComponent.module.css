@@ -43,6 +43,16 @@
   padding-bottom: 26px;
 }
 
+.details div {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+.details div p {
+  color: var(--secondary);
+}
+
 .details h3 {
   color: var(--text);
   text-transform: capitalize;
