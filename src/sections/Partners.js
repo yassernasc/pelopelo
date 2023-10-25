@@ -8,14 +8,16 @@ const ongs = [
 ];
 
 export const Partners = () => (
-  <section class="section" id="partners">
-    <h2>Nossos Parceiros</h2>
-    <div class={styles.images}>
-      {ongs.map((ong) => (
-        <a key={ong.image} target="_blank" href={ong.link}>
-          <img src={`/${ong.image}.png`} />
-        </a>
-      ))}
+  <section class="section white" id="partners">
+    <div class="section-content">
+      <h2>Nossos Parceiros</h2>
+      <div class={styles.images}>
+        {ongs.map((ong) => (
+          <a key={ong.image} target="_blank" href={ong.link}>
+            <img src={`/${ong.image}.png`} />
+          </a>
+        ))}
+      </div>
     </div>
   </section>
 );

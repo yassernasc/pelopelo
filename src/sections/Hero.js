@@ -1,24 +1,25 @@
-import { Header, Dog } from "@/components";
+import { Header } from "@/components";
 import styles from "./Hero.module.css";
 
 export const Hero = () => (
-  <section class="section">
-    <Header />
+  <section class="section primary">
+    <div class="section-content">
+      <Header />
 
-    <div class={styles.main}>
-      <div class={styles.messages}>
-        <h1>Vamos fazer a diferença pelos animais?</h1>
-        <p>
-          PeloPelo é um projeto de apoio às ONGs da causa animal de Campina
-          Grande-PB, por meio da tecnologia e inovação.
-        </p>
+      <div class={styles.main}>
+        <div class={styles.messages}>
+          <h1>Vamos fazer a diferença pelos animais?</h1>
+          <p>
+            No coração de um abrigo, há centenas de histórias esperando para
+            serem escritas. São olhares ansiosos, patinhas carentes e corações
+            cheios de amor à espera de uma segunda chance.
+          </p>
 
-        <a href="#poll" class="button">
-          Nos ajude a escolher nosso focinho
-        </a>
-      </div>
-      <div class={styles.dogContainer}>
-        <Dog />
+          <a href="#poll" class="button">
+            Adote um amigo
+          </a>
+        </div>
+        <img src="/hero.png" />
       </div>
     </div>
   </section>

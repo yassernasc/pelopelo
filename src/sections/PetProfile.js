@@ -7,12 +7,14 @@ export const PetProfile = async ({ pet }) => {
   const images = await getImagesFromPet(pet.id);
 
   return (
-    <div class="section">
-      <Header />
-      <div class={styles.main}>
-        <Album images={images} />
-        <PetInfo pet={pet} />
+    <section class="section primary">
+      <div class="section-content">
+        <Header />
+        <div class={styles.main}>
+          <Album images={images} />
+          <PetInfo pet={pet} />
+        </div>
       </div>
-    </div>
+    </section>
   );
 };

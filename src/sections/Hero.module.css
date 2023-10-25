@@ -1,15 +1,17 @@
 .main {
   display: grid;
-  gap: 30px;
-  grid-template-columns: 3fr 1fr;
+  gap: 100px;
+  grid-template-columns: 1fr 1fr;
   margin-top: var(--xl);
 }
 
 @media (max-width: 600px) {
   .main {
     display: flex;
-    flex-direction: column;
-    gap: 55px;
+    flex-direction: column-reverse;
+    gap: 15px;
+    margin-top: var(--sm);
+    padding: 0 var(--sm);
   }
 }
 
@@ -18,6 +20,15 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .messages {
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
 }
 
 .dogContainer {

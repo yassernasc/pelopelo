@@ -3,11 +3,12 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  margin-top: -50px;
 }
 
-@media (min-width: 600px) {
+@media (max-width: 600px) {
   .container {
-    margin-top: -20px;
+    margin-top: -30px;
   }
 }
 
@@ -26,7 +27,7 @@
 .nav a {
   align-items: center;
   border-bottom: 2px solid transparent;
-  color: var(--text);
+  color: var(--text-contrast);
   display: flex;
   font-weight: bold;
   height: 64px;
@@ -34,7 +35,7 @@
 }
 
 .nav a:hover {
-  border-color: var(--primary);
+  border-color: var(--secondary);
 }
 
 .nav a:first-of-type {

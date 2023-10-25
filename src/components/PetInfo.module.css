@@ -1,9 +1,18 @@
 .container {
-  padding: var(--md);
   text-transform: uppercase;
+  background-color: var(--base);
+  border-radius: var(--sm);
+  color: var(--text);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding: 16px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    gap: 24px;
+  }
 }
 
 .container button {
@@ -12,12 +21,21 @@
   font-size: 0.8rem;
 }
 
+.footer {
+  padding-top: 12px !important;
+}
+
+.footer button {
+  scale: 0.85;
+}
+
 .header h1 {
+  font-size: 1.28rem;
   color: var(--secondary);
 }
 
 .header p {
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   font-weight: 600;
   padding-bottom: 0;
 }
@@ -26,6 +44,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
+  background-color: var(--base);
 }
 
 .info {
@@ -34,29 +53,30 @@
 }
 
 .info span:nth-of-type(1) {
-  font-size: 0.75rem;
+  font-size: 0.6rem;
 }
 
 .info span:nth-of-type(2) {
   font-weight: bold;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 .icons {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 5px;
+  gap: 7px;
 }
 
 .infoCard {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: var(--xs);
   align-items: center;
-  border: 2px solid var(--inactive);
   padding: var(--sm) 0;
   border-radius: var(--xs);
   justify-content: space-between;
+  background-color: var(--white);
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.25);
 }
 
 .infoCard .icon {
@@ -64,7 +84,7 @@
 }
 
 .infoCard h3 {
-  font-size: 0.6rem;
+  font-size: 0.5rem;
 }
 
 .infoCard div {

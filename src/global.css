@@ -27,6 +27,7 @@
 
   --text: #555;
   --text-contrast: #fff;
+  --white: #fff;
 
   --inactive: #dedede;
 
@@ -46,11 +47,11 @@ h1 {
 h1,
 h2 {
   font-family: var(--heading-font);
-  color: var(--primary);
 }
 
 h2 {
-  padding: 1rem 0;
+  padding-bottom: 1rem;
+  color: var(--secondary);
 }
 
 h3 {
@@ -70,7 +71,6 @@ span {
 p {
   font-size: 1.1rem;
   padding: 0.75rem 0;
-  color: var(--text);
 }
 
 /* elements */
@@ -116,28 +116,32 @@ a {
 /* section patterns */
 
 .section {
-  margin: var(--md) auto var(--xl) auto;
-  max-width: 50em;
-  padding: 8px;
+  padding: 58px var(--xs);
 }
 
-.colored-section {
-  background-color: var(--secondary);
-  padding: var(--lg) 8px;
-}
-
-.colored-section-content {
-  color: var(--text-contrast);
+.section-content {
   margin: 0 auto;
   max-width: 50em;
 }
 
-.colored-section-content :is(h1, h2, h3, p) {
+.section.primary {
+  background-color: var(--primary);
   color: var(--text-contrast);
 }
 
-.colored-section-content button {
-  background-color: var(--primary);
+.section.white {
+  background-color: var(--white);
+  color: var(--text);
+}
+
+.section.base {
+  background-color: var(--base);
+  color: var(--text);
+}
+
+.section.secondary {
+  background-color: var(--secondary);
+  color: var(--text-contrast);
 }
 
 /* random */

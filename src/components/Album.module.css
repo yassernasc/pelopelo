@@ -1,6 +1,9 @@
 .container {
   display: flex;
   gap: var(--xs);
+  border-radius: 12px;
+  background-color: var(--white);
+  padding: 16px;
 }
 
 .thumbs {
@@ -12,7 +15,7 @@
 .full {
   border-radius: var(--xs);
   box-shadow: 0px 2px 10px 0px #dedede;
-  height: 480px;
+  height: 400px;
   margin: auto;
   object-fit: cover;
   width: 100%;

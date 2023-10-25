@@ -23,8 +23,7 @@ export const CatalogComponent = ({ pets }) => {
   };
 
   return (
-    <section class="section" id="catalog">
-      <h2>Encontre seu novo amigo</h2>
+    <>
       <div class={styles.list}>
         {activePage.map((pet) => (
           <PetCard key={pet.id} pet={pet} />
@@ -41,6 +40,6 @@ export const CatalogComponent = ({ pets }) => {
           </span>
         ))}
       </div>
-    </section>
+    </>
   );
 };

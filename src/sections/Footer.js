@@ -5,8 +5,8 @@ import { TempLogo } from "@/components";
 
 export const Footer = () => (
   <>
-    <section class="colored-section" id="footer">
-      <div class={c("colored-section-content", styles.content)}>
+    <section class="section secondary" id="footer">
+      <div class={c("section-content", styles.content)}>
         <TempLogo />
         <div class={styles.verticalLine}></div>
         <div class={styles.social}>

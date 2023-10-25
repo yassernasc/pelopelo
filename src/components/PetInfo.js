@@ -58,6 +58,8 @@ export const PetInfo = ({ pet }) => (
       <ProfileInfoCard label="especial" value={pet.especial} />
     </div>
 
-    <Adopt pet={pet} />
+    <div class={styles.footer}>
+      <Adopt pet={pet} />
+    </div>
   </div>
 );
