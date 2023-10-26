@@ -1,0 +1,21 @@
+.filter-bar {
+  background-color: var(--secondary-1);
+  width: 200px;
+  height: 1000px;
+  float: left;
+  padding: 20px;
+  color: var(--base-1);
+  border-radius: 10px;
+}
+
+.filter-bar h3 {
+  color: var(--base-1);
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+.filter-bar label {
+  display: flex;
+}

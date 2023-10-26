@@ -1,4 +1,5 @@
 import styles from "./Catalog.module.css";
+import { FilterBar } from "@/components";
 
 const pets = [
   { id: 0, name: "apollo", sex: "macho", description: "13 anos, porte médio" },
@@ -31,10 +32,13 @@ const Card = ({ pet }) => (
 export const Catalog = () => (
   <section class="section" id="catalog">
     <h2>Encontre seu novo amigo</h2>
-    <div class={styles.list}>
-      {pets.map((pet) => (
-        <Card key={pet.id} pet={pet} />
-      ))}
+    <div>
+      <FilterBar />
+      <div class={styles.list}>
+        {pets.map((pet) => (
+          <Card key={pet.id} pet={pet} />
+        ))}
+      </div>
     </div>
   </section>
 );

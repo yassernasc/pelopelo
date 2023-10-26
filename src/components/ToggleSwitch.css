@@ -1,0 +1,27 @@
+.toggle-switch {
+  width: 33px;
+  height: 15px;
+  background-color: #6cdcd6;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+}
+
+.slider {
+  width: 19px;
+  height: 19px;
+  background-color: #289892;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s;
+}
+
+.slider.on {
+  left: 19px;
+}
+
+.slider.off {
+  left: 0;
+}
