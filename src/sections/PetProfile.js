@@ -7,7 +7,7 @@ export const PetProfile = async ({ pet }) => {
   const images = await getImagesFromPet(pet.id);
 
   return (
-    <section class="section primary">
+    <section class="section primary-to-base">
       <div class="section-content">
         <Header />
         <div class={styles.main}>

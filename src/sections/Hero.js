@@ -15,7 +15,7 @@ export const Hero = () => (
             cheios de amor à espera de uma segunda chance.
           </p>
 
-          <a href="#poll" class="button">
+          <a href="#catalog" class="button">
             Adote um amigo
           </a>
         </div>

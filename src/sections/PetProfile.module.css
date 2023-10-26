@@ -1,8 +1,6 @@
 .main {
   grid-template-columns: 10fr 8fr;
   display: grid;
-  max-height: 100vh;
-  overflow-y: scroll;
   gap: var(--xs);
   margin-top: 55px;
 }

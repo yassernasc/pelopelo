@@ -3,7 +3,7 @@ import { SimpleTextLogo } from "@/components/SimpleTextLogo";
 import styles from "./Header.module.css";
 
 const items = [
-  ["Enquete", "#poll"],
+  ["Adote", "#catalog"],
   ["Quem Somos", "#about"],
   ["Parceiros", "#partners"],
   ["Contato", "#footer"],
