@@ -5,7 +5,7 @@ import { CloseIcon } from "./CloseIcon";
 import styles from "./Adopt.module.css";
 
 const getFormattedName = ({ nome, sexo }) =>
-  `${sexo === "macho" ? "o" : "a"} ${nome}`;
+  `${sexo.toLowerCase() === "macho" ? "o" : "a"} ${nome}`;
 
 export const Adopt = ({ pet }) => (
   <Dialog.Root>
