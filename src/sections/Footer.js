@@ -1,13 +1,14 @@
 import c from "clsx";
 import styles from "./Footer.module.css";
 
-import { TempLogo } from "@/components";
-
 export const Footer = () => (
   <>
     <section class="section secondary" id="footer">
       <div class={c("section-content", styles.content)}>
-        <TempLogo />
+        <div class={styles.logoContainer}>
+          <img src={`/1.png`} />
+          <img src="/tipografia.png" />
+        </div>
         <div class={styles.verticalLine}></div>
         <div class={styles.social}>
           <div class={styles.icons}>

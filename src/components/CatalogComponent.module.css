@@ -1,8 +1,14 @@
 .list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
   gap: 54px 16px;
+  grid-template-columns: repeat(4, 1fr);
   margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .pagination {
@@ -20,8 +26,9 @@
   font-size: 0.9rem;
   height: 38px;
   justify-content: center;
+  transition-duration: 0.05s;
+  transition-property: border;
   width: 38px;
-  transition-duration: 0.15s;
 }
 
 .pagination .activePage {

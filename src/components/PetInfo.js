@@ -25,10 +25,13 @@ const ProfileInfoCard = ({ label, value }) => {
 
 export const PetInfo = ({ pet }) => (
   <div class={styles.container}>
-    <div class={styles.header}>
-      <h1>{pet.nome}</h1>
-      <p>Publicado em {formatDate(pet.created_at)}</p>
+    <div class={styles.headerContainer}>
+      <div class={styles.header}>
+        <h1>{pet.nome}</h1>
+        <p>Publicado em {formatDate(pet.created_at)}</p>
+      </div>
     </div>
+
     <div class={styles.infoContainer}>
       <div class={styles.info}>
         <span>Espécie</span>
@@ -57,6 +60,7 @@ export const PetInfo = ({ pet }) => (
       <ProfileInfoCard label="castrado" value={pet.castrado} />
       <ProfileInfoCard label="especial" value={pet.especial} />
     </div>
+    <p class={styles.vacinaSubtitle}>*Vacina Antirrábica</p>
 
     <div class={styles.footer}>
       <Adopt pet={pet} />

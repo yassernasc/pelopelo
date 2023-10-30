@@ -13,6 +13,21 @@
   }
 }
 
+.logoContainer {
+  display: flex;
+  gap: 12px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoContainer img:nth-child(1) {
+  width: 80px;
+}
+
+.logoContainer img:nth-child(2) {
+  width: 180px;
+}
+
 .social {
   align-items: center;
   display: flex;
@@ -56,13 +71,7 @@
 
 .end {
   background-color: var(--primary);
-  padding: 5px;
-}
-
-@media (max-width: 600px) {
-  .end {
-    display: none;
-  }
+  padding: 5px 32px;
 }
 
 .end p {
