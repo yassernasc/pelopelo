@@ -19,7 +19,8 @@
     "react": "latest",
     "react-dom": "latest",
     "react-hook-form": "^7.47.0",
-    "react-input-mask": "^2.0.4"
+    "react-input-mask": "^2.0.4",
+    "react-use": "^17.4.0"
   },
   "devDependencies": {
     "husky": "^8.0.3",
