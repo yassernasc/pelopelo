@@ -40,6 +40,28 @@
   text-transform: uppercase;
 }
 
+.content form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: var(--sm);
+  text-transform: uppercase;
+}
+
+form .labelContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2px;
+}
+
+form .errorMessage {
+  padding: 0;
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: var(--error);
+}
+
 .submit {
   font-size: 0.9rem;
   margin-top: 20px;

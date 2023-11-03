@@ -17,7 +17,9 @@
     "next": "latest",
     "ramda": "^0.29.1",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-hook-form": "^7.47.0",
+    "react-input-mask": "^2.0.4"
   },
   "devDependencies": {
     "husky": "^8.0.3",
