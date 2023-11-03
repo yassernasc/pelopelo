@@ -12,20 +12,26 @@ const getFormattedName = ({ nome, sexo }) =>
   `${sexo.toLowerCase() === "macho" ? "o" : "a"} ${nome}`;
 
 export const Adopt = ({ pet }) => {
-  const [close, setClose] = useState(false);
+  const [open, setOpen] = useState(false);
 
   const {
-    formState: { errors, isValid },
+    formState: { errors },
     handleSubmit,
     control,
+    reset,
   } = useForm();
 
   const onSubmit = (data) => {
-    setClose(true);
+    setOpen(false);
+  };
+
+  const onOpenChange = (newState) => {
+    reset();
+    setOpen(newState);
   };
 
   return (
-    <Dialog.Root open={!close}>
+    <Dialog.Root open={open} onOpenChange={onOpenChange}>
       <Dialog.Trigger asChild>
         <button>Quero Adotar</button>
       </Dialog.Trigger>
@@ -60,7 +66,7 @@ export const Adopt = ({ pet }) => {
                 }}
                 render={({ field: { onChange, onBlur, ref } }) => (
                   <input
-                    placeholder="Digite seu nome"
+                    placeholder="DIGITE SEU NOME"
                     onBlur={onBlur}
                     onChange={onChange}
                     inputRef={ref}
@@ -129,7 +135,7 @@ export const Adopt = ({ pet }) => {
               />
             </span>
 
-            <button type="submit" disabled={!isValid} class={styles.submit}>
+            <button type="submit" class={styles.submit}>
               Enviar Interesse
             </button>
             <Dialog.Close asChild>
