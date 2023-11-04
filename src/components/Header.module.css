@@ -33,9 +33,11 @@
   border-bottom: 2px solid transparent;
   color: var(--text-contrast);
   display: flex;
+  font-size: 0.75rem;
   font-weight: bold;
   height: 64px;
   justify-content: center;
+  text-transform: uppercase;
 }
 
 .nav a:hover {

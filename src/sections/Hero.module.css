@@ -23,6 +23,10 @@
   justify-content: center;
 }
 
+.messages a {
+  padding: 0 var(--lg);
+}
+
 @media (max-width: 600px) {
   .messages {
     align-items: center;

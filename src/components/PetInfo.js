@@ -12,7 +12,7 @@ const IconsMap = {
 };
 
 const ProfileInfoCard = ({ label, value }) => {
-  const Icon = IconsMap[label];
+  const Icon = IconsMap[label.replace("*", "")];
 
   return (
     <div class={styles.infoCard}>
@@ -55,7 +55,7 @@ export const PetInfo = ({ pet }) => (
       </div>
     </div>
     <div class={styles.icons}>
-      <ProfileInfoCard label="vacinado" value={pet.vacinado} />
+      <ProfileInfoCard label="vacinado*" value={pet.vacinado} />
       <ProfileInfoCard label="vermifugado" value={pet.vermifugado} />
       <ProfileInfoCard label="castrado" value={pet.castrado} />
       <ProfileInfoCard label="especial" value={pet.especial} />
