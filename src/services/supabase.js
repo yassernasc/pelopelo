@@ -9,8 +9,8 @@ const publicKey =
 
 const db = createClient(databaseUrl, publicKey);
 
-export const registerAdopter = async (adopter) =>
-  db.from("adopter").insert({ adopter });
+export const registerAdoptionRequest = (data) =>
+  db.from("adoption_request").insert(data);
 
 export const registerVote = (option) => db.from("votes").insert({ option });
 

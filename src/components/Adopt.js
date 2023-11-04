@@ -7,6 +7,7 @@ import * as Dialog from "@radix-ui/react-dialog";
 
 import { CloseIcon } from "./CloseIcon";
 import { AdoptionSuccess } from "./AdoptionSuccess";
+import { registerAdoptionRequest } from "@/services/supabase";
 import styles from "./Adopt.module.css";
 
 const getFormattedName = ({ nome, sexo }) =>
@@ -23,7 +24,9 @@ export const Adopt = ({ pet }) => {
     reset,
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = ({ nome, contato, cpf }) => {
+    const payload = { name: nome, contact: contato, cpf, pet_id: pet.id };
+    registerAdoptionRequest(payload).then();
     setSubmitted(true);
   };
 
