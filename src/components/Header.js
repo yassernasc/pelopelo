@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { useMedia } from "react-use";
 
 import { SimpleTextLogo } from "@/components/SimpleTextLogo";
@@ -25,6 +25,7 @@ const items = {
 
 export const Header = () => {
   const pathname = usePathname();
+  const router = useRouter();
 
   const isMobile = useMedia("(max-width: 600px)");
   const isOnRootPage = pathname === "/";
@@ -43,10 +44,8 @@ export const Header = () => {
         ))}
       </nav>
       {!isOnRootPage && isMobile && (
-        <nav class="backContainer">
-          <Link href="/">
-            <BackBtn class={styles.icon} />
-          </Link>
+        <nav class={styles.backContainer} onClick={router.back}>
+          <BackBtn class={styles.icon} />
         </nav>
       )}
     </header>

@@ -47,3 +47,7 @@
 .nav a:first-of-type {
   margin-left: auto;
 }
+
+.backContainer {
+  cursor: pointer;
+}

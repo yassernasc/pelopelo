@@ -19,7 +19,7 @@ export const Hero = () => (
             Adote um amigo
           </a>
         </div>
-        <img src="/hero.png" />
+        <img src="/hero.webp" />
       </div>
     </div>
   </section>

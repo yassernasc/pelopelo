@@ -6,23 +6,23 @@ export const Footer = () => (
     <section class="section secondary" id="footer">
       <div class={c("section-content", styles.content)}>
         <div class={styles.logoContainer}>
-          <img src={`/1.png`} />
-          <img src="/tipografia.png" />
+          <img src="/1.webp" loading="lazy" />
+          <img src="/tipografia.webp" loading="lazy" />
         </div>
         <div class={styles.verticalLine}></div>
         <div class={styles.social}>
           <div class={styles.icons}>
             <a target="_blank" href="https://www.instagram.com/pelopelocg">
               <div class={styles.iconContainer}>
-                <img src="/instagram.png" />
+                <img src="/instagram.png" loading="lazy" />
               </div>
             </a>
             <div class={styles.iconContainer}>
-              <img src="/zap.png" />
+              <img src="/zap.png" loading="lazy" />
             </div>
             <a target="_blank" href="mailto:contato@pelopelo.org">
               <div class={styles.iconContainer}>
-                <img src="/mail.png" />
+                <img src="/mail.png" loading="lazy" />
               </div>
             </a>
           </div>

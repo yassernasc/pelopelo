@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html class={c(headingFont.variable, textFont.variable)} lang="pt-BR">
       <head>
-        <link rel="icon" type="image/png" sizes="300x300" href="/1.png" />
+        <link rel="icon" type="image/png" sizes="300x300" href="/1.webp" />
       </head>
       <body>{children}</body>
       <Script id="goatcounter-checkprod">
